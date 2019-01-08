@@ -1,0 +1,35 @@
+<div class="container">
+  <div class="row">
+    <div class="card">
+      <div class="card-header bg-info">Task List</div>
+        <div class="card-body">
+            <table class="table table-striped">
+              <thead class="bg-secondary">
+                <tr>
+                    <th>Id</th>
+                    <th>Title</th>
+                    <th>Description</th>
+                    <th>Creation-Date</th>
+                    <th>Start-Date</th>
+                    <th>End-Date</th>
+                    <th>Completed</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr *ngFor="let task of tasks">
+                  <td>{{task.id}}</td>
+                  <td>{{task.title}}</td>
+                  <td>{{task.description}}</td>
+                  <td>{{task.creationDate}}</td>
+                  <td>{{task.startDate}}</td>
+                  <td>{{task.endDate}}</td>
+                  <td>{{task.completed}}</td>
+                  <td><button class="btn btn-success btn-sm" (click)="editTask(task)" style="margin-right:2px;">Edit</button>              
+                  <button class="btn btn-danger btn-sm" (click)="deleteTask(task)">delete</button></td>                                    
+                </tr>
+              </tbody>
+            </table>
+        </div>
+      </div>
+  </div>
+</div>
